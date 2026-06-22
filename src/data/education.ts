@@ -3,41 +3,36 @@ import type { EducationItem } from "@/types";
 export const education: EducationItem[] = [
   {
     id: "edu-1",
-    degree: "M.Sc. in Computer Science",
-    institution: "University of Indonesia",
-    period: "2014 — 2016",
+    degree: "B.Sc. in Physics",
+    institution: "State University of Jakarta",
+    period: "2018 - 2023",
     description:
-      "Specialized in distributed systems and software engineering. Thesis on real-time event processing architectures for large-scale enterprise applications.",
+      "Focused on Computational Physics with major on Data Analytics, Machine Learning and Computer Vision",
   },
   {
     id: "edu-2",
-    degree: "B.Sc. in Information Systems",
-    institution: "Bandung Institute of Technology",
-    period: "2010 — 2014",
+    degree: "Machine Learning Cohort of Bangkit Academy",
+    institution: "Google, GoTo, and Traveloka (Kampus Merdeka)",
+    period: "2023",
     description:
-      "Foundation in software engineering, database systems, and enterprise architecture. Graduated with honors. Active in software development community.",
+      "Focused on Machine Learning Training with variouse lesson and online course with final project form team build solution",
   },
 ];
 
 export const certifications = [
   {
-    name: "AWS Certified Solutions Architect — Professional",
-    issuer: "Amazon Web Services",
+    name: "Neo4j Graph Data Science ",
+    issuer: "Neo4j",
     year: "2023",
   },
   {
-    name: "Certified Kubernetes Administrator (CKA)",
-    issuer: "Cloud Native Computing Foundation",
-    year: "2022",
+    name: "Neo4j Certified Professional",
+    issuer: "Neo4j",
+    year: "2023",
   },
   {
-    name: "TOGAF 9 Certified — Enterprise Architecture",
-    issuer: "The Open Group",
-    year: "2021",
-  },
-  {
-    name: "PMP — Project Management Professional",
-    issuer: "Project Management Institute",
-    year: "2020",
+    name: "Bangkit Academy (Machine Learning)",
+    issuer: "Google, Goto and Traveloka",
+    year: "2023",
   },
 ];

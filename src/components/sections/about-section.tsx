@@ -7,6 +7,7 @@ import { FadeIn } from "@/components/animations/fade-in";
 import { experiences } from "@/data/experience";
 import { education, certifications } from "@/data/education";
 import { skillGroups } from "@/data/skills";
+import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Award, Briefcase, GraduationCap, Sparkles } from "lucide-react";
 
@@ -14,11 +15,26 @@ export function AboutSection() {
   return (
     <section id="about" className="relative py-24 sm:py-32">
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          eyebrow="About Me"
-          title="Architecting enterprise solutions"
-          description="With over 8 years of experience building enterprise applications, I help organizations transform their digital infrastructure and build scalable, maintainable systems."
-        />
+        <div className="flex flex-col items-start gap-8 lg:flex-row lg:items-center lg:justify-between">
+          <SectionHeading
+            className="lg:max-w-xl"
+            eyebrow="About Me"
+            title="Architecting enterprise solutions"
+            description="With over 3 years of experience building enterprise applications and delivered solution, I help organizations transform their digital infrastructure and build scalable, maintainable systems."
+          />
+          <FadeIn direction="left" delay={0.2}>
+            <div className="relative h-64 w-64 shrink-0 overflow-hidden rounded-2xl border border-border bg-secondary sm:h-72 sm:w-72">
+              <Image
+                src="/profile.jpeg"
+                alt="Ahmad Fauzan profile photo"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 288px"
+                priority
+              />
+            </div>
+          </FadeIn>
+        </div>
 
         <div className="mt-16 grid gap-12 lg:grid-cols-12">
           <FadeIn direction="right" className="lg:col-span-5">
@@ -34,39 +50,30 @@ export function AboutSection() {
                   I'm a Senior Technical Consultant and Fullstack Developer
                   with a passion for building enterprise-grade applications
                   that solve complex business problems. My expertise spans
-                  across application architecture, digital transformation,
-                  audit systems, HRIS development, and fraud detection.
+                  across industries Finance, Manufacture, Industrial Estate, and Goverment Public Sectors.
                 </p>
                 <p>
                   I've led digital transformation initiatives for organizations
-                  across Southeast Asia, modernizing legacy systems and
-                  building cloud-native platforms that serve millions of users.
+                  in Indonesia, modernizing legacy systems and
+                  building solution for enterprise clients.
                   My approach combines technical excellence with strategic
                   thinking to deliver solutions that drive measurable business
                   value.
                 </p>
                 <p>
-                  When I'm not architecting systems, I'm mentoring developers,
-                  contributing to open source, and exploring emerging
-                  technologies that shape the future of enterprise software.
+                  When I'm not architecting systems, I'm leading cross-functional initiatives, bridging business requirements with technical execution, and building solutions that enable organizations to scale and transform their operations.
                 </p>
               </div>
 
               <div className="grid grid-cols-3 gap-4 pt-4">
                 <div className="rounded-lg border border-border bg-card p-4 text-center">
-                  <div className="text-2xl font-bold">8+</div>
+                  <div className="text-2xl font-bold">3+</div>
                   <div className="mt-1 text-xs text-muted-foreground">
                     Years Experience
                   </div>
                 </div>
                 <div className="rounded-lg border border-border bg-card p-4 text-center">
-                  <div className="text-2xl font-bold">50+</div>
-                  <div className="mt-1 text-xs text-muted-foreground">
-                    Projects Delivered
-                  </div>
-                </div>
-                <div className="rounded-lg border border-border bg-card p-4 text-center">
-                  <div className="text-2xl font-bold">15+</div>
+                  <div className="text-2xl font-bold">5+</div>
                   <div className="mt-1 text-xs text-muted-foreground">
                     Enterprise Clients
                   </div>
@@ -165,19 +172,18 @@ export function AboutSection() {
           <FadeIn>
             <h3 className="text-xl font-semibold mb-8">Technical Skills</h3>
           </FadeIn>
-          <StaggerContainer className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <StaggerContainer className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 items-stretch">
             {skillGroups.map((group) => (
-              <StaggerItem key={group.category}>
-                <div className="rounded-xl border border-border bg-card p-6">
+              <StaggerItem key={group.category} className="h-full">
+                <div className="h-full rounded-xl border border-border bg-card p-6">
                   <h4 className="mb-4 text-sm font-semibold uppercase tracking-wide text-muted-foreground">
                     {group.category}
                   </h4>
-                  <div className="space-y-4">
-                    {group.skills.map((skill, idx) => (
+                  <div className="flex flex-wrap gap-2">
+                    {group.skills.map((skill) => (
                       <SkillBar
                         key={skill.name}
                         skill={skill}
-                        delay={idx * 0.1}
                       />
                     ))}
                   </div>

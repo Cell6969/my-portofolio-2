@@ -5,6 +5,7 @@ import { siteConfig } from "@/constants/site";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ScrollProgress } from "@/components/layout/scroll-progress";
+import { ThemeProvider } from "@/components/layout/theme-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,10 +29,6 @@ export const metadata: Metadata = {
     "Senior Technical Consultant",
     "Senior Fullstack Developer",
     "Enterprise Application Development",
-    "Digital Transformation",
-    "Audit System Development",
-    "HRIS Development",
-    "Fraud Detection System",
     "Software Engineer Indonesia",
   ],
   authors: [{ name: siteConfig.name, url: siteConfig.url }],
@@ -120,17 +117,20 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`dark ${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-        <ScrollProgress />
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <ThemeProvider>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          />
+          <ScrollProgress />
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

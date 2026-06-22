@@ -140,40 +140,6 @@ export function PortfolioSection() {
             })}
           </StaggerContainer>
         </div>
-
-        <FadeIn className="mt-16">
-          <div className="rounded-xl border border-border bg-card p-8">
-            <h3 className="text-center text-lg font-semibold">
-              Track Record of Impact
-            </h3>
-            <div className="mt-6 grid grid-cols-2 gap-6 sm:grid-cols-4">
-              <div className="text-center">
-                <div className="text-3xl font-bold">8M+</div>
-                <div className="mt-1 text-xs text-muted-foreground">
-                  Daily Transactions
-                </div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold">$12M+</div>
-                <div className="mt-1 text-xs text-muted-foreground">
-                  Fraud Prevented
-                </div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold">40%</div>
-                <div className="mt-1 text-xs text-muted-foreground">
-                  Avg. Cost Reduction
-                </div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold">99.9%</div>
-                <div className="mt-1 text-xs text-muted-foreground">
-                  System Uptime
-                </div>
-              </div>
-            </div>
-          </div>
-        </FadeIn>
       </div>
     </section>
   );

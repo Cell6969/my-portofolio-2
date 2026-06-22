@@ -2,57 +2,73 @@ import type { SkillGroup } from "@/types";
 
 export const skillGroups: SkillGroup[] = [
   {
-    category: "Frontend",
+    category: "Programming Languages",
     skills: [
-      { name: "React / Next.js", level: 95 },
-      { name: "TypeScript", level: 92 },
-      { name: "Tailwind CSS", level: 90 },
-      { name: "Framer Motion", level: 85 },
+      { name: "JavaScript", icon: "javascript" },
+      { name: "TypeScript", icon: "typescript" },
+      { name: "Python", icon: "python" },
+      { name: "PHP", icon: "php" },
+      { name: "Java", icon: "springboot" },
     ],
   },
   {
     category: "Backend",
     skills: [
-      { name: "Node.js / NestJS", level: 93 },
-      { name: "Python / FastAPI", level: 88 },
-      { name: "GraphQL", level: 85 },
-      { name: "Microservices", level: 90 },
+      { name: "NestJS", icon: "nestjs" },
+      { name: "FastAPI", icon: "fastapi" },
+      { name: "Flask", icon: "flask" },
+      { name: "Laravel", icon: "laravel" },
+      { name: "Spring Boot", icon: "springboot" },
     ],
   },
   {
-    category: "Database",
+    category: "Frontend",
     skills: [
-      { name: "PostgreSQL", level: 92 },
-      { name: "MongoDB", level: 85 },
-      { name: "Redis", level: 88 },
-      { name: "Elasticsearch", level: 80 },
+      { name: "React.js", icon: "react" },
+      { name: "Next.js", icon: "nextdotjs" },
     ],
   },
   {
-    category: "DevOps & Cloud",
+    category: "Databases & Storage",
     skills: [
-      { name: "AWS", level: 90 },
-      { name: "Docker / Kubernetes", level: 88 },
-      { name: "CI/CD Pipelines", level: 85 },
-      { name: "Terraform", level: 82 },
+      { name: "PostgreSQL", icon: "postgresql" },
+      { name: "MySQL", icon: "mysql" },
+      { name: "Neo4j", icon: "neo4j" },
+      { name: "Redis", icon: "redis" },
+      { name: "Qdrant", icon: "qdrant" },
+      { name: "MinIO", icon: "minio" },
     ],
   },
   {
-    category: "Architecture & Practices",
+    category: "Cloud Platforms",
     skills: [
-      { name: "System Design", level: 92 },
-      { name: "Event-Driven Architecture", level: 88 },
-      { name: "Domain-Driven Design", level: 85 },
-      { name: "Enterprise Architecture", level: 87 },
+      { name: "Google Cloud Platform", icon: "googlecloud" },
+      { name: "AWS", icon: "amazonaws" },
     ],
   },
   {
-    category: "Tools",
+    category: "DevOps & Deployment",
     skills: [
-      { name: "Apache Kafka", level: 85 },
-      { name: "Git / Version Control", level: 95 },
-      { name: "Jira / Confluence", level: 90 },
-      { name: "Prometheus / Grafana", level: 80 },
+      { name: "Docker", icon: "docker" },
+      { name: "Nginx", icon: "nginx" },
+      { name: "GitHub Actions", icon: "githubactions" },
+    ],
+  },
+  {
+    category: "AI Technologies",
+    skills: [
+      { name: "LLM" },
+      { name: "RAG" },
+      { name: "Prompt Engineering" },
+      { name: "Vector Search" },
+      { name: "Knowledge Graph" },
+    ],
+  },
+  {
+    category: "Tools & Collaboration",
+    skills: [
+      { name: "Git", icon: "git" },
+      { name: "Jira", icon: "jira" },
     ],
   },
 ];

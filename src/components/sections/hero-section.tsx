@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowDown, Mail, MapPin } from "lucide-react";
+import { ArrowDown, Download, Mail, MapPin } from "lucide-react";
 import { siteConfig } from "@/constants/site";
 import { Button } from "@/components/ui/button";
 import { socialLinks } from "@/constants/site";
@@ -104,6 +104,21 @@ export function HeroSection() {
             >
               <Mail className="h-4 w-4" />
               Get in Touch
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              asChild
+              className="w-full sm:w-auto"
+            >
+              <a
+                href="/Ahmad_Fauzan_Resume.pdf"
+                download
+                aria-label="Download resume"
+              >
+                <Download className="h-4 w-4" />
+                Download Resume
+              </a>
             </Button>
           </motion.div>
 

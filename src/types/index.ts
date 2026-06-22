@@ -45,21 +45,13 @@ export interface EducationItem {
   description: string;
 }
 
-export type SkillCategory =
-  | "Frontend"
-  | "Backend"
-  | "Database"
-  | "DevOps & Cloud"
-  | "Architecture & Practices"
-  | "Tools";
-
 export interface SkillItem {
   name: string;
-  level: number;
+  icon?: string;
 }
 
 export interface SkillGroup {
-  category: SkillCategory;
+  category: string;
   skills: SkillItem[];
 }
 

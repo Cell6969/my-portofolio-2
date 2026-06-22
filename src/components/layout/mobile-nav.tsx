@@ -47,21 +47,13 @@ export function MobileNav({ activeSection }: MobileNavProps) {
 
       <AnimatePresence>
         {open && (
-          <>
-            <motion.div
-              className="fixed inset-0 z-[70] bg-black/80 backdrop-blur-sm md:hidden"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setOpen(false)}
-            />
-            <motion.div
-              className="fixed inset-y-0 right-0 z-[80] flex w-full max-w-xs flex-col bg-card p-6 shadow-2xl md:hidden"
-              initial={{ x: "100%" }}
-              animate={{ x: 0 }}
-              exit={{ x: "100%" }}
-              transition={{ type: "spring", stiffness: 300, damping: 30 }}
-            >
+          <motion.div
+            className="fixed inset-0 z-[80] flex w-full flex-col bg-secondary p-6 md:hidden"
+            initial={{ x: "100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "100%" }}
+            transition={{ type: "spring", stiffness: 300, damping: 30 }}
+          >
               <div className="flex items-center justify-between">
                 <span className="text-lg font-semibold">Menu</span>
                 <Button
@@ -94,7 +86,6 @@ export function MobileNav({ activeSection }: MobileNavProps) {
                 ))}
               </nav>
             </motion.div>
-          </>
         )}
       </AnimatePresence>
     </>

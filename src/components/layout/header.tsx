@@ -5,6 +5,7 @@ import { navItems, siteConfig } from "@/constants/site";
 import { sectionIds } from "@/constants/site";
 import { useActiveSection } from "@/hooks/use-active-section";
 import { MobileNav } from "@/components/layout/mobile-nav";
+import { ThemeToggle } from "@/components/layout/theme-toggle";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -34,6 +35,7 @@ export function Header() {
           <span className="text-lg font-bold tracking-tight">
             {siteConfig.name.split(" ")[0]}
             <span className="text-muted-foreground">.</span>
+            {siteConfig.name.split(" ")[1][0]}
           </span>
         </button>
 
@@ -62,6 +64,7 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
+          <ThemeToggle />
           <Button
             variant="default"
             size="sm"

@@ -73,7 +73,7 @@ export function ContactSection() {
         <SectionHeading
           eyebrow="Contact"
           title="Let's build something together"
-          description="Have a project in mind or looking for a technical consultant? I'd love to hear from you."
+          description="Have a project or opportunity in mind or looking for a technical consultant / software developer? I'd love to hear from you."
           align="center"
         />
 
@@ -83,7 +83,7 @@ export function ContactSection() {
               <h3 className="text-lg font-semibold">Get in touch</h3>
               <p className="mt-2 text-sm text-muted-foreground">
                 Whether you're looking to modernize legacy systems, build a new
-                enterprise application, or need technical consulting, I'm here
+                enterprise application, or need developer, I'm here
                 to help.
               </p>
 
@@ -126,7 +126,7 @@ export function ContactSection() {
                   <Check className="h-5 w-5" />
                 </div>
                 <div>
-                  <p className="text-sm font-medium">Available for projects</p>
+                  <p className="text-sm font-medium">Available for projects / cooperation</p>
                   <p className="text-xs text-muted-foreground">
                     Currently accepting new opportunities
                   </p>
@@ -208,7 +208,7 @@ export function ContactSection() {
                 </label>
                 <Textarea
                   id="message"
-                  placeholder="Tell me about your project..."
+                  placeholder="Tell me about your project or opportunity..."
                   value={formData.message}
                   onChange={(e) => handleChange("message", e.target.value)}
                   aria-invalid={!!errors.message}
