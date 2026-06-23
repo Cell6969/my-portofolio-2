@@ -25,7 +25,6 @@ export const siteConfig: SiteConfig = {
 export const navItems: NavItem[] = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
-  { label: "Projects", href: "#projects" },
   { label: "Portfolio", href: "#portfolio" },
   { label: "Contact", href: "#contact" },
 ];
@@ -51,7 +50,6 @@ export const socialLinks: SocialLink[] = [
 export const sectionIds = [
   "home",
   "about",
-  "projects",
   "portfolio",
   "contact",
 ] as const;

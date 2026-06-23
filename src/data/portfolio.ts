@@ -2,87 +2,98 @@ import type { PortfolioItem } from "@/types";
 
 export const portfolioItems: PortfolioItem[] = [
   {
-    id: "case-1",
-    title: "Banking Digital Transformation",
-    category: "Case Study",
-    summary:
-      "Transformed a traditional bank's legacy infrastructure into a modern digital platform serving 2M+ customers.",
-    challenge:
-      "A regional bank was struggling with a monolithic legacy system that couldn't scale to meet growing digital banking demands. Transaction processing was slow, deployment cycles took weeks, and the system couldn't integrate with modern fintech APIs.",
-    solution:
-      "Designed and implemented a microservices architecture with event-driven communication. Migrated critical services incrementally using the strangler fig pattern. Built an API gateway for seamless fintech integrations and implemented a CI/CD pipeline for rapid, reliable deployments.",
-    outcome:
-      "The transformation reduced transaction processing time by 70%, enabled daily deployments, and improved system availability to 99.99%. The bank launched 5 new digital products within the first year of transformation.",
-    achievements: [
-      "2M+ customers migrated with zero data loss",
-      "70% reduction in transaction processing time",
-      "99.99% system availability post-transformation",
-      "5 new digital products launched in year one",
-      "Daily deployment capability established",
+    id: "audit",
+    title: "Audit Management System",
+    category: "Enterprise",
+    description:
+      "A comprehensive audit management system enabling end-to-end audit lifecycle management for enterprise organizations.",
+    longDescription:
+      "A full-featured enterprise audit platform that streamlines the entire audit lifecycle from planning and scheduling to execution,collaboration, reporting, and remediation tracking. The system supports risk-based audit planning, automated workflow routing, evidence management, real-time analytics dashboards, and integrated with Generative AI to Improve document planning for audit plan including team recomendation based on experience, education and skills. Designed to serve auditors across multiple business units with role-based access control and comprehensive audit trails.",
+    technologies: [
+      "Next.js",
+      "Nest JS",
+      "Neo4j",
+      "Flask",
+      "Redis",
+      "Docker",
+      "Langchain",
+      "MinIo"
     ],
-    year: "2024",
+    image: "/images/portfolio/audit.png",
   },
   {
-    id: "case-2",
-    title: "Enterprise Audit Automation",
-    category: "Case Study",
-    summary:
-      "Automated audit processes for a Fortune 500 company, reducing audit cycle time by 45%.",
-    challenge:
-      "A multinational corporation's internal audit team was spending 60% of their time on manual evidence collection and report generation. Audit cycles took months, and maintaining compliance across multiple regulatory frameworks was becoming unsustainable.",
-    solution:
-      "Built a comprehensive audit management platform with automated evidence collection, risk-based audit planning, and real-time compliance monitoring. Integrated with existing ERP and financial systems to automate data gathering. Implemented customizable report templates and a collaborative review workflow.",
-    outcome:
-      "The platform reduced audit cycle time by 45%, automated 85% of evidence collection, and improved audit readiness. The audit team shifted from reactive to proactive, focusing on strategic risk advisory rather than manual data gathering.",
-    achievements: [
-      "45% reduction in audit cycle time",
-      "85% of evidence collection automated",
-      "SOX, GDPR, and ISO 27001 compliance monitoring",
-      "1,200+ auditors onboarded across business units",
-      "Audit preparation time reduced by 70%",
+    id: "hris",
+    title: "HR Management",
+    category: "Enterprise",
+    description:
+      "Enterprise Human Resource Management Solution",
+    longDescription:
+      "Designed and delivered a comprehensive Human Resource Management platform to support both operational and strategic workforce management across the organization. The solution integrates core HR Operations, Organizational Structure Management, People Development, Manpower Planning, and Executive Reporting into a single centralized system. Key capabilities include employee administration, attendance and leave management, organizational hierarchy management, position and grade management, performance evaluation, competency assessments, training and development programs, career and succession planning, workforce forecasting, and management dashboards. The platform enables HR teams and executives to improve operational efficiency, enhance employee development, optimize workforce planning, and make data-driven decisions through real-time reporting and analytics. Additionally the system support for multi tenancy role that can monitoring different company in one.",
+    technologies: [
+      "Laravel",
+      "PostgreSQL",
+      "Redis",
+      "PG Vector",
+      "Mapbox",
     ],
-    year: "2023",
+    image: "/images/portfolio/hris.png",
   },
   {
-    id: "case-3",
-    title: "HRIS Modernization Program",
-    category: "Case Study",
-    summary:
-      "Modernized a legacy HRIS into a cloud-native platform, serving 5,000+ employees with 99.9% uptime.",
-    challenge:
-      "An organization's on-premise HRIS was slow, unreliable, and couldn't support remote work or self-service. HR teams were overwhelmed with manual requests, and employee satisfaction with HR services was at an all-time low.",
-    solution:
-      "Architected a cloud-native HRIS with microservices, built a self-service employee portal, and implemented automated workflows for common HR processes. Integrated payroll, leave management, and performance reviews into a unified platform with real-time analytics.",
-    outcome:
-      "The modernization reduced HR processing time by 60%, eliminated 70% of HR support tickets through self-service, and achieved 99.9% uptime. Employee satisfaction with HR services improved significantly.",
-    achievements: [
-      "5,000+ employees on the new platform",
-      "60% reduction in HR processing time",
-      "70% reduction in HR support tickets",
-      "99.9% platform uptime achieved",
-      "Multi-country payroll and tax compliance",
+    id: "fraud",
+    title: "Fraud & AML Detection System",
+    category: "Enterprise",
+    description:
+      "Fraud & Anti-Money Laundering (AML) Detection Platform",
+    longDescription:
+      "Designed and delivered an enterprise Fraud & Anti-Money Laundering (AML) Detection Platform for a leading state-owned financial institution (BUMN Finance) to strengthen transaction monitoring and regulatory compliance. The solution continuously analyzes customer transaction data through scheduled detection pipelines that execute configurable fraud and AML rules to identify suspicious activities and potential compliance violations. The platform provides a centralized environment for managing detection rules, orchestrating monitoring pipelines, configuring approval workflows, and handling investigation cases from identification through resolution. To support compliance and internal audit teams, the system also delivers analytical dashboards and monitoring insights that enable broader risk identification, trend analysis, and more effective case follow-up. The solution helps organizations improve fraud detection capabilities, streamline investigation processes, and enhance oversight across high-volume transaction environments.",
+    technologies: [
+      "Python",
+      "Springboot",
+      "MySQL",
+      "Neo4j",
+      "MongoDB",
+      "GCP",
     ],
-    year: "2023",
+    image: "/images/portfolio/fraud.png",
   },
   {
-    id: "case-4",
-    title: "Real-Time Fraud Prevention",
-    category: "Case Study",
-    summary:
-      "Deployed a real-time fraud detection engine processing 8M+ transactions daily with 96.5% accuracy.",
-    challenge:
-      "A financial services company was experiencing increasing fraud losses with their rule-based detection system. The system had high false positive rates, causing customer friction, and couldn't adapt to new fraud patterns quickly enough.",
-    solution:
-      "Built a real-time fraud detection engine using ensemble machine learning models combining rule-based logic, anomaly detection, and behavioral analysis. Implemented a streaming architecture with Apache Kafka and Flink for sub-100ms transaction scoring. Created an investigation dashboard for fraud analysts with case management.",
-    outcome:
-      "The fraud detection engine achieved 96.5% detection rate while reducing false positives by 35%. The real-time scoring prevented $12M+ in fraudulent transactions in the first year.",
-    achievements: [
-      "8M+ transactions processed daily",
-      "96.5% fraud detection rate",
-      "35% reduction in false positives",
-      "$12M+ fraud prevented in year one",
-      "Sub-100ms transaction scoring latency",
+    id: "land",
+    title: "Land Management (Extended Odoo Module)",
+    category: "Enterprise",
+    description:
+      "A comprehensive land management solution built on top of Odoo to manage land assets, plots, blocks, land aqcuisition and development projects.",
+    longDescription:
+      "Designed and developed a custom Land Management solution as an extension of the Odoo platform to support end-to-end land asset administration and planning. The system enables organizations to manage land inventories through interactive plotting and mapping capabilities, define land boundaries, organize plots into blocks and lots, classify land based on business requirements, and associate assets and development projects with each land parcel. By centralizing spatial and operational data into a single platform, the solution improves visibility, asset governance, planning accuracy, and operational efficiency for land development and management activities.",
+    technologies: [
+      "Odoo",
+      "PostgreSQL",
+      "Mapbox",
     ],
-    year: "2023",
+    image: "/images/portfolio/land.png",
+  },
+  {
+    id: "hajj",
+    title: "Tracing & Tracking for Hajj Pilgrims",
+    category: "POC",
+    description:
+      "A mobile-based tracing and tracking solution designed to monitor Hajj pilgrims in real time and support emergency response operations.",
+    longDescription:
+      "Developed a Proof of Concept (POC) for the Ministry of Religious Affairs to improve the safety, monitoring, and operational coordination of Hajj pilgrims during pilgrimage activities. The solution combines mobile technology, real-time location tracking, and command center integration to provide visibility into pilgrim movements and enable rapid incident response. Key capabilities include live location tracking, geofenced radius monitoring, emergency dispatch coordination, and a panic button feature that allows pilgrims to instantly send alerts to operators. The platform was designed to support operational teams in monitoring large groups of pilgrims, improving situational awareness, and accelerating emergency response through a centralized command center.",
+    technologies: [
+      "React Native",
+      "Node.js",
+      "Neo4j",
+      "MQTT",
+      "Kafka",
+      "Redis",
+    ],
+    image: "/images/portfolio/hajj.png",
   },
 ];
+
+export const portfolioCategories = [
+  "All",
+  "Enterprise",
+  "Self Portfolio",
+  "POC",
+] as const;

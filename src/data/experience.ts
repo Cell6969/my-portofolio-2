@@ -93,6 +93,6 @@ export const experiences: ExperienceItem[] = [
       "Built supporting applications and integrations, including React Native mobile solutions and business intelligence integrations with Tableau and Power BI",
       "Participated in solution architecture discussions, technical reviews, and proof-of-concept (POC) implementations for enterprise clients across financial and public sectors"
     ],
-    technologies: ["JavaScript", "React", "Python", "React Native", "Postgresql", "Neo4j", "Java"],
+    technologies: ["JavaScript", "React", "Python", "React Native", "PostgreSQL", "Neo4j", "Java"],
   },
 ];

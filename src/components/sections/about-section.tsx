@@ -47,18 +47,10 @@ export function AboutSection() {
               </div>
               <div className="space-y-4 text-sm leading-relaxed text-muted-foreground">
                 <p>
-                  I'm a Senior Technical Consultant and Fullstack Developer
-                  with a passion for building enterprise-grade applications
-                  that solve complex business problems. My expertise spans
-                  across industries Finance, Manufacture, Industrial Estate, and Goverment Public Sectors.
+                  I'm a Technical Consultant and Product Engineering Leader with a passion for building enterprise solutions that solve complex business challenges. My experience spans across Finance, Manufacturing, Industrial Estate, and Government sectors, delivering solutions in ERP, Generative AI, Fraud Detection, Analytics, and Digital Transformation initiatives.
                 </p>
                 <p>
-                  I've led digital transformation initiatives for organizations
-                  in Indonesia, modernizing legacy systems and
-                  building solution for enterprise clients.
-                  My approach combines technical excellence with strategic
-                  thinking to deliver solutions that drive measurable business
-                  value.
+                  I've led technology-driven transformation projects for organizations across Indonesia, helping modernize operations, improve decision-making, and accelerate business growth through scalable and practical technology solutions. My approach combines business understanding, solution architecture, and hands-on technical execution to deliver measurable business outcomes.
                 </p>
                 <p>
                   When I'm not architecting systems, I'm leading cross-functional initiatives, bridging business requirements with technical execution, and building solutions that enable organizations to scale and transform their operations.

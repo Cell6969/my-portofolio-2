@@ -7,7 +7,8 @@ export type ProjectCategory =
   | "Digital Transformation"
   | "Audit System"
   | "HRIS"
-  | "Fraud Detection";
+  | "Fraud Detection"
+  | "AI & Analytics";
 
 export interface ProjectMetric {
   label: string;
@@ -21,10 +22,8 @@ export interface Project {
   description: string;
   longDescription: string;
   technologies: string[];
-  metrics: ProjectMetric[];
+  metrics?: ProjectMetric[];
   highlights: string[];
-  year: string;
-  role: string;
 }
 
 export interface ExperienceItem {
@@ -55,16 +54,16 @@ export interface SkillGroup {
   skills: SkillItem[];
 }
 
+export type PortfolioCategory = "Enterprise" | "Self Portfolio" | "POC";
+
 export interface PortfolioItem {
   id: string;
   title: string;
-  category: string;
-  summary: string;
-  challenge: string;
-  solution: string;
-  outcome: string;
-  achievements: string[];
-  year: string;
+  category: PortfolioCategory;
+  description: string;
+  longDescription: string;
+  technologies: string[];
+  image?: string;
 }
 
 export interface NavItem {

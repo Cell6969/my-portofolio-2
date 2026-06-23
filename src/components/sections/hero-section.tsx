@@ -90,10 +90,10 @@ export function HeroSection() {
           >
             <Button
               size="lg"
-              onClick={() => handleScrollTo("#projects")}
+              onClick={() => handleScrollTo("#portfolio")}
               className="w-full sm:w-auto"
             >
-              View Projects
+              View Portfolio
               <ArrowDown className="h-4 w-4" />
             </Button>
             <Button
