@@ -48,12 +48,25 @@ export function MobileNav({ activeSection }: MobileNavProps) {
       <AnimatePresence>
         {open && (
           <motion.div
-            className="fixed inset-0 z-[80] flex w-full flex-col bg-secondary p-6 md:hidden"
-            initial={{ x: "100%" }}
-            animate={{ x: 0 }}
-            exit={{ x: "100%" }}
-            transition={{ type: "spring", stiffness: 300, damping: 30 }}
+            key="mobile-nav-container"
+            className="fixed top-0 left-0 z-[100] w-screen h-[100dvh] md:hidden"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
           >
+            {/* Backdrop */}
+            <div 
+              className="absolute inset-0 bg-black/80 backdrop-blur-sm"
+              onClick={() => setOpen(false)}
+            />
+            {/* Drawer */}
+            <motion.div
+              className="absolute inset-y-0 right-0 z-[110] flex w-3/4 max-w-sm flex-col border-l border-border bg-card p-6 shadow-2xl"
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+            >
               <div className="flex items-center justify-between">
                 <span className="text-lg font-semibold">Menu</span>
                 <Button
@@ -61,6 +74,7 @@ export function MobileNav({ activeSection }: MobileNavProps) {
                   size="icon"
                   onClick={() => setOpen(false)}
                   aria-label="Close menu"
+                  className="rounded-full"
                 >
                   <X className="h-5 w-5" />
                 </Button>
@@ -75,7 +89,7 @@ export function MobileNav({ activeSection }: MobileNavProps) {
                       "rounded-lg px-4 py-3 text-left text-base font-medium transition-colors",
                       activeSection === item.href.slice(1)
                         ? "bg-secondary text-foreground"
-                        : "text-muted-foreground hover:bg-secondary hover:text-foreground"
+                        : "text-muted-foreground hover:bg-secondary/50 hover:text-foreground"
                     )}
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -86,6 +100,7 @@ export function MobileNav({ activeSection }: MobileNavProps) {
                 ))}
               </nav>
             </motion.div>
+          </motion.div>
         )}
       </AnimatePresence>
     </>
