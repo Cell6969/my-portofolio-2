@@ -37,7 +37,7 @@ export function ProjectCard({ project, onClick, className }: ProjectCardProps) {
               src={project.image!}
               alt={project.title}
               fill
-              className="object-cover transition-transform duration-500 group-hover:scale-105"
+              className="object-contain transition-transform duration-500 group-hover:scale-105"
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             />
           </div>
@@ -73,7 +73,7 @@ export function ProjectCard({ project, onClick, className }: ProjectCardProps) {
             )}
           </div>
 
-          {"metrics" in project && project.metrics.length > 0 && (
+          {"metrics" in project && project.metrics && project.metrics.length > 0 && (
             <div className="mt-5 flex items-center gap-4 border-t border-border pt-4">
               {project.metrics.slice(0, 2).map((metric) => (
                 <div key={metric.label} className="flex flex-col">

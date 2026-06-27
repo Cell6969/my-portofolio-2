@@ -3,7 +3,7 @@
 import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search } from "lucide-react";
-import type { PortfolioItem } from "@/types";
+import type { PortfolioItem, Project } from "@/types";
 import { portfolioItems, portfolioCategories } from "@/data/portfolio";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { ProjectCard } from "@/components/shared/project-card";
@@ -16,7 +16,7 @@ type CategoryFilter = (typeof portfolioCategories)[number];
 export function PortfolioSection() {
   const [activeCategory, setActiveCategory] = useState<CategoryFilter>("All");
   const [searchQuery, setSearchQuery] = useState<string>("");
-  const [selectedItem, setSelectedItem] = useState<PortfolioItem | null>(null);
+  const [selectedItem, setSelectedItem] = useState<PortfolioItem | Project | null>(null);
   const [modalOpen, setModalOpen] = useState<boolean>(false);
 
   const filteredItems = useMemo((): PortfolioItem[] => {
@@ -34,7 +34,7 @@ export function PortfolioSection() {
     });
   }, [activeCategory, searchQuery]);
 
-  const handleItemClick = (item: PortfolioItem): void => {
+  const handleItemClick = (item: PortfolioItem | Project): void => {
     setSelectedItem(item);
     setModalOpen(true);
   };

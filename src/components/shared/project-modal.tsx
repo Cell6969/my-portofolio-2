@@ -38,7 +38,7 @@ export function ProjectModal({ project, open, onOpenChange }: ProjectModalProps)
                 src={project.image}
                 alt={project.title}
                 fill
-                className="object-cover"
+                className="object-contain"
                 sizes="(max-width: 768px) 100vw, 640px"
               />
             </div>
@@ -48,7 +48,7 @@ export function ProjectModal({ project, open, onOpenChange }: ProjectModalProps)
             {project.longDescription}
           </p>
 
-          {"highlights" in project && project.highlights.length > 0 && (
+          {"highlights" in project && project.highlights && project.highlights.length > 0 && (
             <div>
               <h4 className="mb-3 text-sm font-semibold uppercase tracking-wide text-muted-foreground">
                 Key Highlights
@@ -64,7 +64,7 @@ export function ProjectModal({ project, open, onOpenChange }: ProjectModalProps)
             </div>
           )}
 
-          {"metrics" in project && project.metrics.length > 0 && (
+          {"metrics" in project && project.metrics && project.metrics.length > 0 && (
             <div>
               <h4 className="mb-3 text-sm font-semibold uppercase tracking-wide text-muted-foreground">
                 Impact & Metrics

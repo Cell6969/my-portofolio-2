@@ -54,7 +54,7 @@ export interface SkillGroup {
   skills: SkillItem[];
 }
 
-export type PortfolioCategory = "Enterprise" | "Self Portfolio" | "POC";
+export type PortfolioCategory = "Enterprise" | "Personal Project" | "POC";
 
 export interface PortfolioItem {
   id: string;

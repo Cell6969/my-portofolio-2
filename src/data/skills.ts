@@ -26,6 +26,7 @@ export const skillGroups: SkillGroup[] = [
     skills: [
       { name: "React.js", icon: "react" },
       { name: "Next.js", icon: "nextdotjs" },
+      { name: "Flutter", icon: "flutter"}
     ],
   },
   {
@@ -60,7 +61,7 @@ export const skillGroups: SkillGroup[] = [
       { name: "LLM" },
       { name: "RAG" },
       { name: "Prompt Engineering" },
-      { name: "Vector Search" },
+      { name: "Langchain" },
       { name: "Knowledge Graph" },
     ],
   },

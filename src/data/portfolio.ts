@@ -12,6 +12,8 @@ export const portfolioItems: PortfolioItem[] = [
     technologies: [
       "Next.js",
       "Nest JS",
+      "Javascript/Typescript",
+      "Python",
       "Neo4j",
       "Flask",
       "Redis",
@@ -19,7 +21,7 @@ export const portfolioItems: PortfolioItem[] = [
       "Langchain",
       "MinIo"
     ],
-    image: "/images/portfolio/audit.png",
+    image: "/images/portfolio/audit_1.png",
   },
   {
     id: "hris",
@@ -35,6 +37,8 @@ export const portfolioItems: PortfolioItem[] = [
       "Redis",
       "PG Vector",
       "Mapbox",
+      "PHP",
+      "Docker"
     ],
     image: "/images/portfolio/hris.png",
   },
@@ -53,8 +57,9 @@ export const portfolioItems: PortfolioItem[] = [
       "Neo4j",
       "MongoDB",
       "GCP",
+      "Camunda BPN"
     ],
-    image: "/images/portfolio/fraud.png",
+    image: "/images/portfolio/fraud_1.png",
   },
   {
     id: "land",
@@ -68,6 +73,7 @@ export const portfolioItems: PortfolioItem[] = [
       "Odoo",
       "PostgreSQL",
       "Mapbox",
+      "OWL Framework"
     ],
     image: "/images/portfolio/land.png",
   },
@@ -87,13 +93,48 @@ export const portfolioItems: PortfolioItem[] = [
       "Kafka",
       "Redis",
     ],
-    image: "/images/portfolio/hajj.png",
+    image: "/images/portfolio/hajj_1.jpg",
+  },
+  {
+    id: "fraud_investor",
+    title: "Investor Profiling & Market Manipulation Recognition",
+    category: "POC",
+    description:
+      "A graph-powered market surveillance platform for analyzing investor relationships and detecting potential market manipulation patterns.",
+    longDescription:
+      "Designed and developed a Proof of Concept (POC) for the Indonesian Financial Services Authority (OJK) to support capital market surveillance through graph-based analytics. The solution ingests stock transaction and investor profile data from the organization's Data Warehouse into Neo4j using Apache Zeppelin, enabling relationship-driven analysis beyond traditional tabular datasets. The platform provides Investor Profiling capabilities to analyze investor behavior, ownership structures, and interconnected entities, alongside Market Manipulation Recognition to identify suspicious transaction patterns and potential collusive activities. An interactive graph visualization interface allows investigators and analysts to explore complex relationships, trace transaction networks, and uncover hidden connections that may indicate market abuse or fraudulent investment activities.",
+    technologies: [
+      "React Js",
+      "Nest JS",
+      "Neo4j",
+      "Apache Zepellin",
+      "Apache Spark"
+    ],
+    image: "/images/portfolio/fraud_investor_1.jpg",
+  },
+  {
+    id: "ewallet",
+    title: "E-Wallet",
+    category: "Personal Project",
+    description:
+      "A digital wallet application that enables secure wallet top-ups, fund transfers, and digital product purchases through integrated payment services.",
+    longDescription:
+      "Designed and developed a cross-platform digital wallet application using Flutter to demonstrate modern fintech application architecture and digital payment integration. The platform enables users to securely top up wallet balances through Midtrans, transfer funds between users, and purchase digital products such as prepaid mobile credits and data packages. The backend is built with FastAPI and PostgreSQL, providing secure transaction processing and wallet management. The project showcases payment gateway integration, digital wallet operations, transaction management, and a scalable backend architecture for financial applications.",
+    technologies: [
+      "Dart",
+      "Flutter",
+      "PostgreSQL",
+      "Python",
+      "Fast API",
+      "Midtrans"
+    ],
+    image: "/images/portfolio/ewallet.png",
   },
 ];
 
 export const portfolioCategories = [
   "All",
   "Enterprise",
-  "Self Portfolio",
+  "Personal Project",
   "POC",
 ] as const;
