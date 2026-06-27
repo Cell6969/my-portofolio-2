@@ -56,7 +56,7 @@ export const skillGroups: SkillGroup[] = [
     ],
   },
   {
-    category: "AI Technologies",
+    category: "AI & Data Intelligence",
     skills: [
       { name: "LLM" },
       { name: "RAG" },
